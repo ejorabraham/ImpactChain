@@ -39,26 +39,4 @@
   )
 )
 
-(define-public (allocate-funds (charity-id uint) (amount uint))
-  (let
-    (
-      (charity (unwrap! (map-get? charities { charity-id: charity-id }) err-not-found))
-    )
-    (map-set charities
-      { charity-id: charity-id }
-      (merge charity { funds-allocated: (+ (get funds-allocated charity) amount) })
-    )
-    (var-set total-funds (+ (var-get total-funds) amount))
-    (ok true)
-  )
-)
-
-;; Read-only Functions
-(define-read-only (get-charity (charity-id uint))
-  (ok (unwrap! (map-get? charities { charity-id: charity-id }) err-not-found))
-)
-
-(define-read-only (get-total-funds)
-  (ok (var-get total-funds))
-)
 
