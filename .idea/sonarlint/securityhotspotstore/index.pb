@@ -15,3 +15,5 @@ E
 contracts/voting.clar,8/c/8c1cfbbcd734bf0b786519a1bc3ab7e69673a66c
 =
 Clarinet.toml,9/d/9d284ad9ceb4c6d6525244c8f2230e5943b9c9b2
+O
+tests/fund-distribution.test.ts,2/3/23239cd843496bf485726f9488fbd6f152c6e6df
